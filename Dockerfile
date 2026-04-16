@@ -40,8 +40,8 @@ RUN bun run build
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 # 11. Configure Apache to listen on Render's required port
-RUN sed -i "s/Listen 80/Listen \${PORT:-80}/g" /etc/apache2/ports.conf
-RUN sed -i "s/:80/:\${PORT:-80}/g" /etc/apache2/sites-available/000-default.conf
+RUN sed -i 's/Listen 80/Listen ${PORT}/g' /etc/apache2/ports.conf
+RUN sed -i 's/:80/:${PORT}/g' /etc/apache2/sites-available/000-default.conf
 
 # 12. Run migrations and start the server
 CMD php artisan migrate --force && apache2-foreground
