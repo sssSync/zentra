@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+/* fonts.bunny.net */
+@import "tailwindcss";
+@import "../../vendor/livewire/flux/dist/flux.css";
+
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+/*@custom-variant dark (&:where(.dark, .dark *));*/
+@theme {
+    --color-brand-green: #c7f33c;
+    --color-brand-dark: #111827;
+    --color-brand-light: #f9fafb;
+    --color-brand-gray: #e3e3e3;
+    --color-brand-dim-green: #e2f2ae;
+    --color-brand-light-gray: #f2f2f2;
+    --color-brand-black: #1c1b22;
+    --color-brand-black-alt: #333238;
+
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+:root {
+    --lime-green: #c7f33c;
+    --dim-green: #e2f2ae;
+    --light-gray: #e3e3e3;
+    --light-gray-alt: #f2f2f2;
+    color-scheme: light;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+
+    /* color: black; */
+}
+
+
+.bg-progress {
+    background: #2e291dfc;
+    background: linear-gradient(-75deg, #39323287, #2e291dfc, #39312c5c);
+}
+
+.bg-complete {
+    background: #1f3624fc;
+    background: linear-gradient(-75deg, #39323287, #2b5422fc, #39312c5c);
+}
+
+.contact-mask {
+    -webkit-mask:
+        url(/public/Vector.svg) center/contain no-repeat,
+        linear-gradient(#000000 0 0);
+    mask:
+        url(/public/Vector.svg) center/contain no-repeat,
+        linear-gradient(#000000 0 0);
+    -webkit-mask-position: top right;
+    mask-position: top right;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-size: 128px 136px;
+    mask-size: 128px 136px;
+    border-radius: 40px;
+    aspect-ratio: 4/3;
+}
+
+.delete-btn {
+    border-color: #e44949bd;
+    background: #7210104f;
+    color: red;
+
+    cursor: pointer;
+}
+
+.note-tab {
+    position: relative;
+    background: transparent;
+    z-index: 2;
+    overflow: hidden;
+    border: none;
+
+    &::before {
+        content: " ";
+
+        position: absolute;
+        backdrop-filter: blur(4rem);
+        border: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+    }
+}
+
+.note-call-tab {
+    /* background: linear-gradient(43deg, #004bc1fa 11%, #0b6b6bb8, #2d2b2b00); */
+    background: linear-gradient(43deg, #004ac152 11%, #0b6b6b83, #2d2b2b00);
+}
+.note-email-tab {
+    /* background: linear-gradient(43deg, #2a00c1fa 11%, #7300c159, #2d2b2b00); */
+        background: linear-gradient(43deg, #2a00c159 11%, #7400c140, #2d2b2b00);
+}
+
+.note-meeting-tab {
+    /* background: linear-gradient(43deg, #8ec100fa 11%, #07bb6769, #2d2b2b00); */
+        background: linear-gradient(43deg, #8ec10012 11%, #07bb6769, #2d2b2b00);
+
+    p {
+        color: rgb(227, 223, 223);
+        font-weight: 500;
+    }
+}
+
+.note-normal-tab {
+    background: linear-gradient(43deg, #121212fa 11%, #1c1b226b, #2d2b2b00);
+}
+
+.invalid-day {
+    mask-image: linear-gradient(rgba(0, 0, 0, 0.613), rgba(0, 0, 0, 0.129));
+}
+.valid-day {
+    background: linear-gradient(90deg, #333238, #333238ed);
+}
+
+.today-day {
+    background: linear-gradient(90deg, #3d5212, #393f23ed);
+}
+
+/* color: #e6f9a8; */
+/* Discovery - Dark Gray */
+/* color: #d1ee6f; */
+/* Proposal - Dark Blue */
+/* color: #8cac22; */
+/* Negotiation - Dark Purple */
+/* color: #c7f33c; */
+/* Won - Dark Green */
+
+.newsreader {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+}
+
+.manrope {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+}

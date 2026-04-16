@@ -1,0 +1,36 @@
+.nav-item-container {
+    /* background: ; */
+
+    a {
+        border-radius: 20px;
+        /* margin: 0 .5rem; */
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+
+        height: 2.4rem;
+        /* border: 1px solid white; */
+        gap: 4px;
+        background: var(--color-brand-black-alt);
+
+        div {
+            margin: 0;
+            flex: 0;
+
+            &:first-child {
+                scale: 1.1;
+            }
+        }
+
+
+        &::after {
+            content: none;
+        }
+
+        &[data-current] {
+            background: rgb(235, 235, 235);
+            color: #27272a;
+        }
+    }
+
+}
